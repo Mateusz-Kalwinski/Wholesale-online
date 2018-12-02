@@ -2,9 +2,9 @@
 
 class Database
 {
-    protected $userName='dev-10';
-    protected $dbName='dev-10';
-    protected $password='ztxpmup9CVTrLbSK';
+    protected $userName='dataapplication';
+    protected $dbName='dataapplication';
+    protected $password='VIXDXBt08M';
     protected $host='localhost';
     protected $db=false;
 
