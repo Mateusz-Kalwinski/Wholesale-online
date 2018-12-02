@@ -1,0 +1,211 @@
+/*
+
+z-index ranges:
+1-99 : menu on the left
+100-199 : navbar at the top
+
+*/
+
+/*Project variables*/
+$darkBackgroundColor:#232e3d;
+$darkerBackgroundColor:#19222d;
+$lessDarkBackgroundColor:rgba(41,53,69,.8);
+//$mainColor:#ff3d2e;
+$errorColor:#ff3d2e;
+$successColor:#80c917;
+$mainColor:#088ab6;
+$alertColor:$mainColor;
+$darkFontColor:#4c5968;
+$lightFontColor:#748190;
+$headerFontColor:#fff;
+$lightBackground:#f3f6f9; 
+$mainElementBackground:#fff; 
+$promotionColor:#007bd9;
+$lightTableColor:#8a95a1;
+$tableHrColor:#f1f7f9;
+$tableInputColor:#ecf0f1;
+$secondaryButtonBackground:#91969e;
+$allStates:'&,&:hover,&:active,&:focus,&:focus:active';
+$historyColor:#f1f7f9;
+//$darkMainColor:#eb392b;
+$darkMainColor:#0082ad;
+/*Bootstrap changes*/
+$enable-rounded:false;
+$input-box-shadow:none;
+$input-focus-box-shadow:none;
+$input-focus-border-color:$mainColor;
+$btn-box-shadow:   none;
+$input-btn-focus-box-shadow:none;
+@import "bootstrap/bootstrap";
+@import "jquery.mCustomScrollbar";
+@import "jquery-ui.min";
+@import "jquery-ui.structure.min";
+@import "jquery-ui.theme.min";
+@import "fonts";
+@import "selectize";
+@import "dropzone";
+//@import "jquery-ui.theme.min";
+
+
+body
+{
+    background-color:$lightBackground!important;
+    overflow-y: scroll;
+    
+    font-family: "metropolisregular",Fallback,sans-serif;
+}
+
+.label-yes,.label-no
+{
+    background-color:#80c917;
+    padding-left:6px;
+    padding-right:6px;
+    color:#fff;
+}
+
+.label-no
+{
+    background-color:#bbb;
+}
+
+button
+{
+    #{$allStates}
+    {
+     cursor:pointer;
+    }
+    
+}
+
+input,button
+{
+        #{$allStates}
+    {
+     outline:0;
+    }
+    
+}
+
+.form-error
+{
+    color:$alertColor!important;
+    font-size:13px;
+}
+
+.btn
+{
+    background-color:$mainColor;
+    display:flex;
+    align-items:center;
+    border:none;
+    font-size:12px;
+    svg
+    {
+        margin-right:9px; 
+        width:22px;
+        height:auto;
+        *
+        {
+          fill:#fff!important;  
+        }
+         
+        
+    }
+    #{$allStates}
+    {
+        color:#fff;
+    }
+    
+    &.block-center
+    {
+        padding-top:10px;
+        padding-bottom:10px;
+        svg
+        {
+            margin-right:0;
+            width:22px;
+            height:auto;
+        }
+    }
+}
+
+.input-custom
+{
+    background-color:$tableInputColor;
+    border:none;
+    text-align:center;
+    color:inherit;
+    resize: none;
+}
+
+#notification
+{
+    .modal-footer button
+    {
+        border:none;
+        
+        
+        #{$allStates}
+        {
+            background-color:$mainColor;
+        }
+    }
+}
+
+a.link
+{
+    #{$allStates}
+    {
+         color:inherit;
+        text-decoration: none;   
+    }
+
+}
+
+.button-secondary
+{
+    background-color:$secondaryButtonBackground;
+    
+    padding:7px 23px;
+    #{$allStates}
+    {
+       color:$headerFontColor;
+       text-decoration: none;
+    }
+}
+
+.block-center
+{
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.btn-text
+{
+    background:none;
+    border:none;
+    box-shadow:none;
+    text-decoration:underline;
+}
+
+.ui-front
+{
+    z-index:1060;
+}
+
+
+
+@import "login";
+@import "nav"; 
+@import "header";
+@import "content"; 
+@import "table";
+@import "product";
+@import "lightbox";
+@import "account";
+@import "order"; 
+@import "order-history";
+@import "error";
+@import "form";
+@import "category-edit"; 
+@import "notification";

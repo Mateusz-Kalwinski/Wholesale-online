@@ -1,0 +1,188 @@
+.history-date-form
+{
+    label
+    {
+        margin-bottom:0;
+        color:$lightFontColor;
+    }
+    &>*
+    {
+        margin-left:8px;
+        margin-right:8px;
+    }
+    
+    input
+    {
+        height:36px;
+        margin-left:8px;
+    }
+            button,input
+        {
+            margin-top:15px;
+        }
+        
+    
+    @include media-breakpoint-down(xs)
+    {
+
+    }
+}
+
+
+.table-history
+{
+   
+    svg *
+    {
+        fill:$mainColor!important;
+    }
+
+
+
+    
+   /*@include media-breakpoint-down(md)
+    {
+        border-left:0;
+        margin-left:auto;
+        margin-right:auto;
+        margin-top:15px;
+        th, td
+        {
+            &:first-of-type,&:nth-of-type(3),&:nth-of-type(4),&:nth-of-type(5)
+            {
+                display:table-cell;   
+            }
+            
+            &:first-of-type
+            {
+                display:none;  
+            }
+            
+            font-size:9px!important;
+            
+            &.order-status
+            {
+                font-size:0!important;
+                width:10%;
+            }
+            
+            padding:10px 5px;
+            
+        }
+        
+        .additional-row
+        {
+            th,td
+            {
+             display:table-cell!important;   
+            }
+            
+        }
+        
+        
+    }*/
+   
+   tr td:not(.table-name)
+       {
+       width:auto;
+   }
+}
+
+.main-row
+{
+    &:hover
+    {
+        cursor:pointer;
+    }
+}
+
+.additional-row
+{
+    display:none;
+    table.table
+    {
+        margin-top:40px;
+        position:relative;
+        tbody
+        {
+            
+           &:before
+           {
+             display:block;
+             position:absolute;
+             height:90%;
+             width:3px;
+             background-color:$mainColor;
+             content:'';
+             left:0;
+             bottom:0
+           }
+        }
+    }
+}
+.show-products
+{
+    transition:all 200ms;
+}
+.show-products.rotated
+{
+    transform:rotateZ(180deg);
+}
+
+.main-row,.additional-row
+{
+    &,table.table
+    {
+        transition:all 600ms;
+    }
+    
+
+}
+
+.extended
+{
+    &,table.table
+    {
+     background-color:$historyColor;
+     
+    }
+    
+    table.table
+    {
+        border-left-color:$historyColor;
+    }
+    
+}
+
+.history-address
+{
+    margin-top:56px;
+    margin-left:45px;
+    margin-bottom:10px;
+}
+
+.history-information
+{
+    @extend .d-flex;
+    @extend .flex-column;
+    @extend .flex-md-row;
+    @extend .align-items-end;
+    @extend .justify-content-md-between;
+    @extend .justify-content-center;
+    @extend .align-items-center;
+    
+    
+    a.btn
+    {
+        margin-top:15px;
+        margin-right:20px;
+        margin-bottom:15px;
+        #{$allStates}
+        {
+         color:$headerFontColor;   
+        }
+        
+    }
+    
+}
+

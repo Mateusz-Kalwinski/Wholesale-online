@@ -1,0 +1,246 @@
+.order-header
+{
+        display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:$mainColor;
+    padding-top:46px;
+    padding-bottom:50px;
+    color:$headerFontColor;
+    margin-bottom:43px;
+    padding-left:15px;
+    padding-right:15px;
+    flex-wrap:wrap;
+    .title , svg
+    {
+        margin-right:37px;
+    }
+    
+    svg 
+    {
+        width:92px;
+        height:auto;
+        *
+        {
+           fill:$headerFontColor!important; 
+        }
+        
+        
+        
+    }
+    
+    .value
+    {
+        height:65px;
+    }
+    
+    .value b
+    {
+        font-size:35px;
+        line-height:1;
+        margin-left:12px;
+    }
+    
+    p
+    {
+        font-size:13px;
+        font-weight: 300;
+        b
+        {
+            font-weight:500;
+        }
+        margin-bottom:0;
+        
+    }
+    
+    h2
+    {
+        font-size:24px;
+    }
+    
+    .title
+    {
+        display:flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+    }
+    
+    .opacity
+    {
+        opacity:.9;
+    }
+    
+    @include media-breakpoint-down(xs)
+        {
+             text-align:center;
+             
+             svg
+             {
+                 margin-bottom:15px;
+                 width:75px;
+             }
+             
+            .title , svg
+            {
+                margin-left:20px;
+                margin-right:20px;
+            }
+            
+            h
+            
+            p
+            {
+                margin-left:auto;
+                margin-right:auto;
+            }
+            
+            .title
+            {
+                margin-bottom:10px;
+            }
+            
+            .value b
+            {
+                font-size:24px;
+            }
+            
+           
+        }
+
+}
+
+.order-form
+{
+    display:flex;
+    align-items:flex-start;
+    justify-content: center;
+    flex-direction: column;
+    
+    
+    textarea
+    {
+        width:100%;
+        max-width:537px;
+        height:92px;
+        text-align: left;
+        padding:13px;
+        margin-bottom:40px;
+        #{$allStates}
+        {
+            border:none;
+            outline: none;
+        } 
+    }
+    
+    .ui-selectmenu-button
+    {
+        @extend .input-custom;
+        text-align:left;
+        border-radius: 0;
+            display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    }
+    
+
+    
+        &>span
+    {
+        margin-bottom:40px;
+    }
+    
+    .delivery-address input
+    {
+        margin-bottom:10px;
+        text-align:left;
+        padding:5px 10px;
+    }
+    
+    
+    
+    @include media-breakpoint-down(xs)
+        {
+            align-items:center;
+            
+            .button-secondary
+            {
+                margin-top: 15px;
+
+            }
+        }
+    
+}
+    .ui-state-active, .ui-widget-content .ui-state-active
+    { 
+        background-color:$mainColor;
+        border:none;
+        margin:0;
+        color:$headerFontColor;;
+    }
+    
+.order-price-end
+{
+    padding-top:30px;
+    padding-bottom:30px;
+    width:100%;
+    max-width:310px;
+    display:flex;
+    align-items:center;
+    justify-content:flex-end;
+    border-top:3px solid $tableHrColor;
+    &>span
+    {
+        font-size:11px;
+        color:$lightFontColor;
+        margin-right:35px;
+        margin-top:10px;
+    }
+    
+    b
+    {
+        font-size:25px;
+        margin-right:35px;
+    }
+    
+    @include media-breakpoint-down(sm)
+    {
+        margin-top:15px;
+    }
+    
+}
+
+label
+{
+    font-size: 13px;
+    opacity: .7;
+}
+
+.order-summary
+{
+        margin-top:30px;
+}
+
+@media(min-width:1400px)
+{
+        .order-summary
+    {
+        margin-top:-60px;
+    }
+}
+
+@include media-breakpoint-up(md)
+{
+    .order-header,.order-form
+    {
+        margin-left:30px;
+    }
+    
+}
+
+.button-secondary
+{
+    font-size:13px;
+    font-weight:600;
+}

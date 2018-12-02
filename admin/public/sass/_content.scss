@@ -1,0 +1,260 @@
+main.content
+{
+    padding-top:64px;
+    padding-left:250px;
+    background: transparent;
+    color:$darkFontColor;
+    position:relative;
+    overflow-x:hidden;
+    &>.main-container
+    {
+        padding:50px;
+        display:flex;
+        .main-content
+        {
+            position:relative;
+            padding-top:22px;
+            padding-left:18px;
+            padding-right:33px;
+            padding-bottom:40px;
+            //min-width:500px;
+            flex:100;
+            margin-right:34px;
+            background:$mainElementBackground;
+            
+            @include media-breakpoint-down(lg)
+            {
+                flex:unset;
+                flex-direction: column;
+            }
+            
+            .content-title
+            {
+                display:flex;
+                align-items:flex-start;
+                justify-content: flex-start;
+                margin-bottom:10px;
+                .content-title-text
+                {
+                    margin-top:-3px;
+                    margin-left:20px;
+                }
+                
+                h4
+                {
+                    margin:0;
+                }
+                
+                p
+                {
+                    font-size:12px;
+                    color:$lightTableColor;
+                }
+                
+                svg
+                {
+                    height:30px;
+                    width:auto;
+                    *
+                    {
+                       fill:$mainColor!important; 
+                    }
+                    
+                }
+                
+
+            }
+            
+
+        }
+        
+        .right-side
+        {
+            display:flex;
+            align-items:center;
+            justify-content:flex-start;
+            flex-direction:column;
+            
+            &>div
+            {
+                width:100vw;
+                max-width:325px;
+                height:205px;
+                padding:20px;
+                padding-top:22px;
+                margin-bottom:32px;
+                .right-side-element-top
+                {
+                    display:flex;
+                    align-items: center;
+                    justify-content: flex-start;
+                    h5
+                    {
+                        margin-right:60px;
+                        font-size:16px;
+                        display:flex; 
+                        align-items:center;
+                    }
+                    
+                    svg
+                    {
+                        margin-right:18px;
+                        height:25px;
+                        width:auto;
+                        *
+                        {
+                            fill:$mainColor!important;
+                        }
+                    }
+                    
+                    a
+                    {
+                        font-size:11px;
+                        opacity:.7;
+                    }
+                    
+                    
+                }
+                
+                &.right-side-discount
+                {
+                    border:3px solid $mainColor;
+                    .right-side-discunt-content
+                    {
+                        display:flex;
+                        align-items:center;
+                        justify-content:center;
+                        align-items:center;
+                        
+                        font-size:80px;
+                        color:$mainColor;
+                    }
+                }
+                
+                &.right-side-contact
+                    {
+                        background:$mainElementBackground;
+
+                        .right-side-contact-content
+                        {
+                            display:flex;
+                            align-items:flex-start;
+                            justify-content:center;
+                            flex-direction:column;
+                            padding-left:34px;
+                            margin-top:21px;
+                            .phone
+                            {
+                                font-size:25px;
+                                margin-bottom:24px;
+                            }
+                            
+                            .mail
+                            {
+                                font-size:16px;
+                                margin-bottom:0;
+                            }
+                        }
+                    }
+                a
+                {
+                    #{$allStates}
+                    {
+                        color:$darkFontColor;
+                        text-decoration: none;
+                    }
+                }
+                
+                &:nth-child(3)
+                    {
+                    height:auto;
+                }
+            }
+        }
+        
+            @include media-breakpoint-down(lg)
+        {
+            //padding:0;
+        }
+    }
+    
+    @include media-breakpoint-down(lg)
+    {
+        .main-container
+        {
+            flex-direction:column-reverse;
+            
+            .right-side
+            {
+                flex-direction: row;
+                justify-content: space-around;
+                    
+                &>div
+                {
+                    width:295px;
+                }
+            }
+            
+            .main-content
+            {
+                margin-right:0;
+            }
+        }
+    }
+    
+    @include media-breakpoint-down(md)
+    {
+        .main-container
+        {
+            padding-left:12px;
+            padding-right:12px;
+            .right-side
+            {
+                flex-direction: column;
+            }
+            
+            .main-content
+            {
+                min-width:unset;
+            }
+        }
+    }
+    
+    @include media-breakpoint-down(sm)
+    {
+        padding-left:0;
+    }
+    
+    .add-to-store
+    {
+        float:right;
+        position: absolute;
+        right: 40px; 
+        //bottom: 20px;
+
+        .btn
+        {
+            font-size:15px;
+            svg
+            {
+                height:20px;
+            }
+        }
+    }
+    
+                .table-panel
+                {
+                    @extend .d-flex;
+                    @extend .justify-content-between;
+                    @extend .align-items-center;
+                    padding-left:20px;
+                    padding-right:20px;
+                    margin-bottom:20px;
+                    .input-custom
+                    {
+                        height:34px;
+                    }
+                   
+                }
+    
+}

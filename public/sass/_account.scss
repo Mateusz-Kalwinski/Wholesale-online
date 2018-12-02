@@ -1,0 +1,269 @@
+.account
+{
+    .user-data
+    {
+        display:flex;
+        justify-content:space-between;
+        padding-left:20px;
+        padding-right:20px;
+        align-items: center;
+        flex-wrap: wrap;
+        
+        .row
+        {
+            width:100%;
+            max-width:620px;
+        }
+        
+        .account-data
+        {
+            margin-top:20px;
+        //    width:30%;
+        }
+        .contact-data
+        {
+            width:30%;
+            
+            h5
+            {
+                text-align: right;
+            }
+            form
+            {
+                width:100%;
+                text-align: right;
+            }
+            
+            input
+            {
+                @extend .input-custom;
+                
+                height:32px;
+                width:190px;
+                margin-bottom:10px;
+
+            }
+            button
+            {
+                margin-left:auto;
+            }
+            
+            @include media-breakpoint-down(md)
+            {
+                h5,form
+                {
+                    text-align: center;
+                }
+                button
+                {
+                    margin-right:auto;
+                }
+            }
+            
+        }
+        .shipment-data
+        {
+            @include media-breakpoint-up(md)
+            {
+              width:100%;  
+            }
+            
+            
+            .add-shipment
+            {
+                height: 100px;
+                width: 100px;
+                border: 3px solid $mainColor;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 82px;
+                line-height: 82px;
+                color: $mainColor;
+                transition: background-color 200ms,border-color 200ms, color 200ms;
+                
+                &:hover
+                {
+                    cursor:pointer;
+                    background-color:$mainColor;
+                    color:$mainElementBackground;
+                }
+                
+                span
+                {
+                    font-weight:500;
+                }
+            }
+            
+            .new-shipment-form
+            {
+                input
+                {
+                    @extend .input-custom;
+                    margin-bottom:5px;
+                    height:32px;
+                width:250px;
+
+                }
+                
+                button
+                {
+                    margin-bottom:15px;
+                }
+            }
+            
+            .shipments
+            {
+                display:flex;
+                flex-wrap:wrap;
+                align-items:center;
+                justify-content: flex-start;
+                margin-top:20px;
+                &>div
+                {
+                    margin-left:10px;
+                    margin-right:10px;
+                    margin-bottom:20px;
+                }
+                
+                @include media-breakpoint-down(md)
+                {
+                    justify-content:center;
+                }
+                
+                .change input
+                {
+                    
+                }
+            }
+            
+            
+        }
+        
+        @include media-breakpoint-down(md)
+        {
+            flex-direction: column;
+            
+            .account-data
+            {
+                width:100%;
+                address
+                {
+                    text-align: center;
+                }
+                
+            }
+            .contact-data
+            {
+                width:100%;
+                text-align: center;
+            }
+        }
+        
+
+    }
+    .content-title-text
+    {
+        span 
+        {
+            &:hover
+                {
+                cursor:pointer;
+            }
+            &.active
+            {
+                font-weight:700;
+
+            }
+        }
+    }
+          
+    
+    #zmien-haslo,#moje-zamowienia
+    {
+        display:none;
+    }
+    
+    #zmien-haslo
+    {
+        h5
+        {
+            margin-bottom:20px;
+        }
+        
+        button
+        {
+            margin-left:auto;
+            margin-right:auto;
+        }
+        
+        input
+        {
+            @extend .input-custom;
+                
+                height:32px;
+                width:190px;
+                margin-bottom:10px;
+                padding:8px;
+        }
+        
+        .password-key-info,.change-data-info
+        {
+            display:none;
+        }
+    }
+    
+    .shipment-buttons
+    {
+        display:flex;
+        align-items:center;
+        justify-content:space-between;
+    }
+    
+     & > .main-container .main-content .content-title 
+    {
+        .change-option
+        {
+            @include media-breakpoint-up(md)
+            {
+                position:absolute;
+                top:30px;
+                right:30px;
+            }
+            
+            font-weight:600;
+
+
+            svg
+            {
+                height:16px!important;
+                                width:auto;
+                
+            }
+            
+            svg *
+            {
+                fill:$headerFontColor!important;
+
+                
+            }
+        }
+        
+    }
+    
+    .content-title
+    {
+        @include media-breakpoint-down(xs)
+        {
+
+        }
+    }
+    
+    .new-shipment-form
+    {
+        svg *
+        {
+            fill:$mainColor!important;
+        }
+    }
+} 

@@ -1,0 +1,50 @@
+.notification
+{
+    @extend .d-flex;
+    @extend .align-items-center;
+    @extend .justify-content-center;
+    @extend .text-center;
+    position:fixed;
+    bottom:0;
+    right:0;
+    background-color:$darkBackgroundColor;
+    border-top:3px solid $mainColor;
+    color:$lightTableColor;
+    width:375px;
+    max-width:100vw;
+    min-height:85px;
+    transform:translateY(100%);
+    z-index:400;
+    padding:20px;
+    font-weight:700;
+    
+    &.showed
+    {
+        transform:none;
+    }
+    
+    p
+    {
+        margin:0;
+    }
+    
+    link
+    {
+        color:$mainColor;
+    }
+    
+    &.notification-error
+    {
+        background-color:$errorColor;
+        border:none;
+        color:#fff;
+    }
+    
+    &.notification-success
+    {
+        background-color:$successColor;
+        border:none;
+        color:#fff;
+    }
+    
+}

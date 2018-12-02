@@ -1,0 +1,314 @@
+.header-main
+{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:100;
+    background-color:$mainColor;
+    height:64px;
+    display:flex;
+    align-items:center;
+    padding-left:21px;
+    padding-right:21px;
+    color:$headerFontColor;
+   font-size:14px;
+    @include media-breakpoint-down(md)
+    {
+        padding-left:15px;
+        padding-right:15px;
+    }
+    
+    
+    &>a:first-of-type
+    {
+        
+        width:225px;
+
+         img
+        {
+            max-height:27px;
+            max-width:100%;
+            margin-right:auto;
+
+        }
+        
+        @include media-breakpoint-down(md)
+        {
+            width:120px;
+        }
+    }
+    
+            button
+            {
+                background:none;
+                border:none;
+                color:$headerFontColor;
+                        display:flex;
+        align-items: flex-end;
+        justify-content: center;
+            }
+            
+            .search
+            {
+                flex:100;
+                position:relative;
+                
+                @include media-breakpoint-up(md)
+                {
+                   padding-left:44px; 
+                }
+                
+                
+                form
+                {
+                    margin-bottom:0;
+                }
+                
+                button
+                {
+                    display:inline-block;
+                    
+                    @include media-breakpoint-down(md)
+                    {
+                        img
+                        {
+                            height:26px;
+                        }
+                    }
+
+                }
+                
+                input
+                {
+                    background:none;
+                    border:none;
+                    border-bottom:1px solid $headerFontColor;
+                    color:$headerFontColor;
+                        width: 100%;
+    max-width: 248px;
+                    &::placeholder
+                    {
+                        color:$headerFontColor;
+                        
+                    }
+                }
+                
+                .search-close
+                {
+                    display:none;
+                }
+                
+                @include media-breakpoint-down(sm)
+                {
+                    &:not(.active)
+                    {
+                        text-align:right; 
+                    }
+                   
+                }
+                
+                .search-results
+                {
+                    position: absolute;
+                    list-style: none;
+                    background: $mainElementBackground;
+                    padding: 5px 0;
+                    width: 165px;
+                    border-bottom: 2px solid $mainColor;;
+                    overflow: hidden;
+                    max-height: 106px;
+                    left: 46px;
+                    display:none;
+                    
+                    li
+                    {
+                        overflow-x:hidden;
+                        text-overflow:ellipsis;
+                        white-space: nowrap;
+                    }
+                    
+                    a
+                    {
+                        
+                        color:$darkFontColor;
+                        padding: 0 20px;
+                        font-weight:600;
+                        &:hover
+                        {
+                            background-color:$lightBackground;
+                            color:$mainColor;
+                        }
+                    }
+                    
+                    .mCSB_dragger_bar
+                    {
+                        background-color:$mainColor;
+                    }
+                    
+                }
+            }
+            
+            
+            
+    
+    a
+    {
+        display:flex;
+        align-items: flex-end;
+        justify-content: center;
+        color:$headerFontColor;
+        
+        svg
+        {
+            margin-right:20px;
+            @include media-breakpoint-down(sm)
+            {
+                margin-right:0;
+            }
+        }
+        
+        #{$allStates}
+        {
+            text-decoration: none;
+        }
+    }
+    
+    &>button
+    {
+        margin-left:20px;
+        margin-right:20px;
+        
+        @include media-breakpoint-down(sm)
+        {
+            margin-left:0;
+            margin-right:0;
+        }
+    }
+    
+    svg path
+    {
+        fill:$headerFontColor!important;
+    }
+    
+    .show-user
+    {
+
+        svg
+        {
+            margin-right:10px;
+            @include media-breakpoint-down(sm)
+            {
+                margin-right:0;
+            }
+        }
+    }
+    
+    .dropdown-toggle:after
+        {
+            margin-bottom: 7px;
+    margin-left: 10px;
+    }
+    
+    .dropdown-menu
+    {
+        width:110%;
+        left:50%!important;
+        transform:translate(-50%,-20px)!important;
+        background-color:$darkMainColor;
+        padding-top:60px;
+        z-index:130;
+        padding-left:10px;
+        padding-right:10px;
+        @include media-breakpoint-down(sm)
+        {
+            left:0!important;
+        }
+    }
+    
+    .dropdown-item:focus
+    {
+        background-color:#fff;
+        color:$darkFontColor;
+    }
+   
+    
+    
+    .search.active
+    {
+        position:absolute;
+        top:0;
+        left:0;
+        height:100%;
+        width:100%;
+        background:$mainColor;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        input
+        {
+            display:inline!important;
+        }
+        
+        .search-close
+        {
+            display:inline-block;
+            
+            svg
+            {
+                width: 15px;
+                height: 15px;
+                margin-left:10px;  
+            }
+
+        }
+    }
+    
+    svg
+    {
+        height:26px;
+        width:auto;
+        
+        @include media-breakpoint-down(sm)
+        {
+            height:23px;
+        }
+    }
+    
+    .show-nav
+    {
+        margin-right:5px;
+        order:1;
+    }
+    
+}
+
+.user-dropdown
+{
+    position:relative;
+    
+    button
+    {
+        z-index:140;
+        position:relative;
+        
+        &:after
+        {
+            @extend .d-none;
+            @extend .d-md-block;
+        }
+    }
+    
+}
+
+.news-bell
+{
+        width: 100%;
+    max-width: 122px;
+    
+    svg
+    {
+        margin-right:0!important;
+    }
+}

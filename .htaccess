@@ -1,0 +1,17 @@
+Options -MultiViews
+RewriteEngine On
+
+RewriteBase /
+
+RewriteRule ^admin/$ - [L]
+RewriteRule ^admin$ - [L]
+RewriteRule ^session/$ - [L]
+RewriteRule ^session$ - [L]
+
+RewriteRule ^.*images/$ - [L]
+RewriteRule ^.*images$ - [L]
+RewriteRule ^.*public/(.*?)\.(php|css|map|js|jpg|jpeg|png|pdf|svg|eot|ttf|woff|woff2)$ public/$1.$2 [L]
+RewriteRule ^(.*?)\.(php|css|map|js|jpg|jpeg|png|pdf|svg|eot|ttf|woff|woff2)$ - [L]
+RewriteRule ^([a-z]{2})/(.*?)$ public/index.php?url=$1/$2 [L]
+RewriteRule ^([a-z]{2})$ public/index.php?url=$1 [L]
+RewriteRule ^(.*)$ public/index.php?url=pl/$1 [L]
