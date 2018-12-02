@@ -3,9 +3,9 @@
 
 class DatabaseAPI
 {
-    protected $userName='c19api';
-    protected $dbName='c19api';
-    protected $password='timsPDRuL#6';
+    protected $userName='api';
+    protected $dbName='api';
+    protected $password='igj@oww2r6';
     protected $host='localhost';
     protected $db=false;
 
